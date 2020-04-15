@@ -20,9 +20,11 @@ class Photo extends Model
     protected $appends = [
         'url',
     ];
+    protected $perPage = 15;
 
     /** IDの桁数 */
     const ID_LENGTH = 12;
+
 
     public function __construct(array $attributes = [])
     {
