@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   vuesplash_web:
     build: .
@@ -7,12 +7,12 @@ services:
     ports:
       - 8081:8081
       - 3000:3000
-  vuesplash_database:
-    image: postgres:11-alpine
+  vuesplash_db:
+    image: postgres:11
     restart: always
     environment:
       POSTGRES_PASSWORD: secret
     volumes:
-      - ./database:/var/lib/postgresql/data
+      - ./database:/var/lib/postgres/data
     ports:
       - 5434:5432
